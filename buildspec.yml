@@ -3,8 +3,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Logging in to Dean Docker Hub...
-      - docker start
+      - echo Bắt đầu chạy
+      - sudo yum install -y docker
+      - sudo service docker start
       - docker info
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
