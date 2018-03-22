@@ -3,14 +3,10 @@ phases:
   pre_build:
     commands:
       - echo Starting...
-      - yum install -y build-essential
-      - yum install -y nodejs
       - echo $DOCKER_USERNAME
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
     commands:
-      - npm install
-      - npm build
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t $IMAGE_REPO_NAME:latest .
