@@ -3,9 +3,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Bắt đầu chạy
+      - echo Stating...
       - yum install -y docker
-      - systemctl start docker
+      - service docker start
       - docker info
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
