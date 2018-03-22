@@ -2,7 +2,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Stating...
+      - echo Starting...
+      - apt-get install -y nodejs
       - echo $DOCKER_USERNAME
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
