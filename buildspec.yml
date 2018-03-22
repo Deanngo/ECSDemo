@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Bắt đầu chạy
-      - apt-get install -y docker
+      - yum install -y docker
       - service docker start
       - docker info
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
