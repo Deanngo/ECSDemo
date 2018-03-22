@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Bắt đầu chạy
       - yum install -y docker
-      - service docker start
+      - systemctl start docker
       - docker info
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
