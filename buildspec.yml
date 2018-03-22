@@ -4,8 +4,6 @@ phases:
   pre_build:
     commands:
       - echo Stating...
-      - yum install -y docker
-      - service docker start
       - docker info
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   build:
